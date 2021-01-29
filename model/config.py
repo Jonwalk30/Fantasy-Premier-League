@@ -18,6 +18,7 @@ PREDICTIONS = "predictions.csv"
 PAST_WEEKS_NUM = [1, 3, 6, 12]
 TARGET_TYPE = "AVG"
 TARGET_WEEKS_INTO_FUTURE = 6
+WEEKS_TO_TRUNCATE = 0
 TIME_RELATED_FEATURES = ['assists', 'bonus', 'bps', 'clean_sheets', 'creativity',
                          'goals_conceded', 'goals_scored', 'ict_index', 'influence',
                          'minutes', 'own_goals', 'penalties_missed', 'penalties_saved', 'red_cards', 'saves',

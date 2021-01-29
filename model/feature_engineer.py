@@ -65,9 +65,10 @@ def main():
 
     gw_df_team_features['is_home'] = gw_df_team_features['was_home']
 
-    gw_df_filtered = gw_df_team_features[TIME_RELATED_FEATURES + ['is_home', 'element_type', 'team', 'team_code']]
+    gw_df_filtered = gw_df_team_features[TIME_RELATED_FEATURES + ['is_home', 'element_type',
+                                                                  'team', 'team_code', 'chance_of_playing_next_round']]
 
-    features_df = gw_df_filtered[['element_type', 'is_home', 'team', 'team_code']]
+    features_df = gw_df_filtered[['element_type', 'is_home', 'team', 'team_code', 'chance_of_playing_next_round']]
 
     features_df['target'] = create_target(gw_df_filtered, TARGET_TYPE, TARGET_WEEKS_INTO_FUTURE)
 

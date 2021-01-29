@@ -56,10 +56,10 @@ def create_features_df(players_path, year):
 def create_position_df_for_year(players_path) -> pd.DataFrame:
     position_year_df = pd.read_csv(os.path.join(players_path, 'players_raw.csv'),
                                    usecols=['first_name', 'second_name',
-                                            'id', 'element_type', 'team', 'team_code'])
+                                            'id', 'element_type', 'team', 'team_code', 'chance_of_playing_next_round'])
 
     position_year_df['player'] = position_year_df['first_name'] + "_" + position_year_df['second_name']
-    return position_year_df[['player', 'element_type', 'team', 'team_code']]
+    return position_year_df[['player', 'element_type', 'team', 'team_code', 'chance_of_playing_next_round']]
 
 
 def create_gw_raw_df_dict():
